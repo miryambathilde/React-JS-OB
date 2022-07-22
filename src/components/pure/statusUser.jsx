@@ -6,16 +6,15 @@ import { Contact } from './../../models/contact.class';
 const StatusUser = ({ contact }) => {
 	return (
 		<div>
-			<h3>
-				Datos del contacto:
-				<p>
-					Nombre: { contact.name } { contact.lastName }
-				</p>
-				<p>
-					Email: { contact.email }
-				</p>
-				<p>Estado del usuario: { contact.connected ? "contacto en línea" : "contacto no disponible" }</p>
-			</h3>
+			<p>
+				Nombre: { contact.name } { contact.lastName }
+			</p>
+			<p>
+				Email: { contact.email }
+			</p>
+			<p>
+				Estado del usuario: { contact.connected ? "contacto en línea" : "contacto no disponible" }
+			</p>
 		</div>
 	);
 };
