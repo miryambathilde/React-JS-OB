@@ -1,7 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import Greeting from "./components/pure/greeting";
-import GreetingFuncion from "./components/pure/greetingFuncion";
+import TaskListComponent from "./components/container/task__list";
 
 function App () {
   return (
@@ -9,10 +8,8 @@ function App () {
       <header className="App-header">
         <img src={ logo } className="App-logo" alt="logo" />
         <p>
-          {/* components */ }
-          {/* name es la props de grettings */ }
-          {/* <Greeting name="Miryam"></Greeting> */ }
-          <GreetingFuncion name="Miryam"></GreetingFuncion>
+          {/* Componente de listado de tareas */ }
+          <TaskListComponent></TaskListComponent>
         </p>
       </header>
     </div>
