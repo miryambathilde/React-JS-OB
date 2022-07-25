@@ -2,6 +2,10 @@ import logo from './logo.svg';
 import './App.css';
 import TaskListComponent from "./components/container/task__list";
 import ContactList from "./components/container/contact__list";
+import UseState from "./components/hooks/useState";
+import UseEffect from "./components/hooks/useEffect";
+import MiComponenteConContexto from "./components/hooks/useContext";
+import Ejemplo from "./components/hooks/ejemplo";
 
 function App () {
   return (
@@ -11,11 +15,20 @@ function App () {
         <p>
           {/* Componente de listado de tareas */ }
           {/* <TaskListComponent></TaskListComponent> */ }
-          <ContactList></ContactList>
+          {/*  <ContactList></ContactList> */ }
+          {/* <UseState></UseState> */ }
+          {/* <UseEffect></UseEffect> */ }
+          {/* <MiComponenteConContexto></MiComponenteConContexto> */ }
+          <Ejemplo nombre="Miryam">
+            {/* todo lo que hay aquí dentro es tradatado como props.children */ }
+            <h3>
+              Contenido del props.children
+            </h3>
+          </Ejemplo>
         </p>
       </header>
     </div>
   );
-}
+};
 
 export default App;
