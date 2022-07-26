@@ -2,7 +2,7 @@
 * Componente funcional con todos los ciclos de vida
 */
 
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const AllCycles = () => {
 

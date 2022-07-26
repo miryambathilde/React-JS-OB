@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Task } from "../../models/task.class";
 
 // le pasamos la props task
 const TaskComponent = ({ task }) => {
+
+	useEffect(() => {
+		console.log('Task created');
+		return () => {
+			console.log(`Task: ${ task.name } is going to unmount`);
+		};
+	}, [ task ]);
 	return (
 		<div>
 			<h2>
