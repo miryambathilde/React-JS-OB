@@ -6,6 +6,7 @@ import UseState from "./components/hooks/useState";
 import UseEffect from "./components/hooks/useEffect";
 import MiComponenteConContexto from "./components/hooks/useContext";
 import Ejemplo from "./components/hooks/ejemplo";
+import GreetingStyled from "./components/pure/greetingStyled";
 
 function App () {
   return (
@@ -14,17 +15,18 @@ function App () {
         <img src={ logo } className="App-logo" alt="logo" />
         <p>
           {/* Componente de listado de tareas */ }
-          {/* <TaskListComponent></TaskListComponent>
+          {/* <TaskListComponent></TaskListComponent> */ }
           {/*  <ContactList></ContactList> */ }
           {/* <UseState></UseState> */ }
           {/* <UseEffect></UseEffect> */ }
           {/* <MiComponenteConContexto></MiComponenteConContexto> */ }
-          <Ejemplo nombre="Miryam">
-            {/* todo lo que hay aquí dentro es tradatado como props.children */ }
+          <GreetingStyled name="Miryam"></GreetingStyled>
+          {/* todo lo que hay aquí dentro es tradatado como props.children */ }
+          {/* <Ejemplo nombre="Miryam">
             <h3>
               Contenido del props.children
             </h3>
-          </Ejemplo>
+          </Ejemplo> */}
         </p>
       </header>
     </div>

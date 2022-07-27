@@ -1,9 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { LEVELS } from "../../models/levels.enum";
+import { LEVELS } from '../../models/levels.enum';
 import { Task } from '../../models/task.class';
-import TaskComponent from "../pure/task";
+import TaskComponent from '../pure/task';
+
+// Importamos la hoja de estilos de task.scss
+import '../../styles/task.scss';
 
 const TaskListComponent = () => {
+
+	const defaultTask = new Task('Example', 'Default description', false, LEVELS.NORMAL);
 
 	// Estado del componente
 	const [ tasks, setTasks ] = useState([ defaultTask ]);
@@ -18,22 +23,18 @@ const TaskListComponent = () => {
 		};
 	}, [ tasks ]);
 
-	// DEFINIMOS LOS VALORES DE LA TAREA POR DEFECTO AL CREARLA
-	const defaultTask = new Task('Example', 'Default description', false, LEVELS.NORMAL);
 
-	// CAMBIAR ESTADO: RECIBE ID DE LA TAREA Y ESTADO A CAMBIAR
-	const changeState = (id) => {
-		console.log('TODO: cambiar estado de la tarea');
+	const changeCompleted = (id) => {
+		console.log('TODO: Cambiar estado de una tarea');
 	};
 
 	return (
 		<div>
-			<h1>
-				Tu lista de tareas:
-			</h1>
-			{/* TODO: Aplicar un for/map para renderizar una lista de tareas */ }
-			{/* aqui le pasamos la props task y le damos el valor de default task */ }
-			<TaskComponent task={ defaultTask } ></TaskComponent>
+			<div>
+				<h1>Tu lista de tareas:</h1>
+			</div>
+			{/* TODO: Aplicar un For/Map para renderizar un a lista */ }
+			<TaskComponent task={ defaultTask }></TaskComponent>
 		</div>
 	);
 };
